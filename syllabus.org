@@ -1,0 +1,83 @@
+#+title: Semantics in Generative Grammar
+#+subtitle: HHU WS 2023/2024
+#+author: Patrick D. Elliott
+#+bibliography: ../bibliography/master.bib
+#+LaTeX_CLASS: scrartcl
+#+LaTeX_CLASS_OPTIONS: [letterpaper,parskip=half]
+#+LaTeX_HEADER: \input{boilerplate}
+#+LaTeX_COMPILER: pdflatex
+#+EXPORT_FILE_NAME: ./syllabus.pdf
+#+OPTIONS: ':t toc:nil
+#+cite_export: biblatex
+
+* TODO Description
+
+* Team
+
+- *Instructor:* Dr. Patrick D. Elliott ~patrick.elliott@hhu.de~; ~https://patrickdelliott.com~
+- *Secretary:* Tim Marton ~tim.marton@phil.hhu.de~
+
+* Time and place
+
+- Class takes place on *Wednesday* at 12:30-14:00.
+- Class takes place in *2303.U1.25*
+  
+* TODO Tutorials
+  
+* Language of instruction
+
+The lectures, as well as the readings for this class will be in *English*.
+
+* Leistungsnachweis
+
+** TODO BN requirements
+
+** TODO AP requirements
+
+- Write a squib.
+  
+* Comms
+
+** Rocketchat
+
+Join the rocketchat channel using the following link: [[https://rocketchat.hhu.de/invite/c8YKhS]]. Note that this is *obligatory*; in an attempt to keep things simple, I'll use this as the main channel of communication for the class, including announcements etc.
+
+** Office hours
+
+I hold office hours at 3-4pm on Wednesdays. You can find me in building 23.21, room 04.73. Please let me know in advance the time that you plan on dropping by, so that I can stagger appointments.
+
+** Email
+
+For any questions regarding the class, please post in rocketchat, so that others can benefit from the response. For any private queries, you can email me at ~patrick.elliott@hhu.edu~.
+
+* TODO Tentative schedule
+
+- 14 90 minute long lectures.
+
+| date   | class                  |
+|--------+------------------------|
+| Oct 11 | Organizational + intro |
+| Oct 18 | TODO                   |
+| Oct 25 | TODO                   |
+| Nov 1 | NO CLASS |
+| Nov 8  | TODO                   |
+| Nov 15 | TODO                   |
+| Nov 22 | TODO                   |
+| Nov 29 | TODO                   |
+| Dec 6 | TODO                   |
+| Dec 13 | TODO                   |
+| Dec 20 | TODO                   |
+|        | WINTER BREAK           |
+| Jan 10 | TODO                   |
+| Jan 17 | TODO                   |
+| Jan 24 | TODO                   |
+| Jan 31 | TODO                   |
+
+- Exam details TBA.
+  
+#+print_bibliography:
+
+# Local Variables:
+# jinx-languages: "en_US de_DE"
+# End:
+
