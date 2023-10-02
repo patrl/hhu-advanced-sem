@@ -10,7 +10,13 @@
 #+OPTIONS: ':t toc:nil
 #+cite_export: biblatex
 
-* TODO Description
+* Description
+
+This course is intended as a first `real' introduction to formal semantics in the context of generative linguistics. That is to say, by the end of this course you'll be equipped with the necessary tools to (i) read formal semantics papers, and (ii) write a serious research paper. To get there, we'll be working through the standard graduate semantics text - "Semantics in Generative Grammar" [cite:@HeimKratzer1998], written by two of the most influential researchers in the field: Irene Heim and Angelika Kratzer. Anecdotally, I've often heard scholars refer to this text as the semantics "bible", and indeed many of the assumptions implicit in contemporary research can be traced back to this textbook. 
+
+Unlike the course "introduction to semantics", which is empirically broad but technically shallow, in this course we'll focus on building an internally coherent analytical framework from the ground up, by focusing on a tightly constrained fragment of English. As a student, you'll be expected to do the weekly reading (i.e., a chapter from /Semantics in Generative Grammar/) and participate in class discussion. There will also be (ungraded) homework exercises taken from the textbook. 
+
+- Class homepage: [[https://github.com/patrl/hhu-advanced-sem]] 
 
 * Team
 
@@ -20,9 +26,7 @@
 * Time and place
 
 - Class takes place on *Wednesday* at 12:30-14:00.
-- Class takes place in *2303.U1.25*
-  
-* TODO Tutorials
+- Class takes place in *2303.U1.25* 
   
 * Language of instruction
 
@@ -30,11 +34,14 @@ The lectures, as well as the readings for this class will be in *English*.
 
 * Leistungsnachweis
 
-** TODO BN requirements
+** BN requirements
 
-** TODO AP requirements
+- Do the weekly reading.
+- Participate in class discussion.
 
-- Write a squib.
+** AP requirements
+
+- Write a squib (i.e., a short research report).
   
 * Comms
 
@@ -50,7 +57,7 @@ I hold office hours at 3-4pm on Wednesdays. You can find me in building 23.21, r
 
 For any questions regarding the class, please post in rocketchat, so that others can benefit from the response. For any private queries, you can email me at ~patrick.elliott@hhu.edu~.
 
-* TODO Tentative schedule
+* Tentative schedule
 
 - 14 90 minute long lectures.
 
@@ -72,8 +79,6 @@ For any questions regarding the class, please post in rocketchat, so that others
 | Jan 17 | First steps towards an intensional semantics              |
 | Jan 24 | TBC                                                       |
 | Jan 31 | TBC                                                       |
-
-- Exam details TBA.
   
 #+print_bibliography:
 
