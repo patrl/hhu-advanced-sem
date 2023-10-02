@@ -54,24 +54,24 @@ For any questions regarding the class, please post in rocketchat, so that others
 
 - 14 90 minute long lectures.
 
-| date   | class                  |
-|--------+------------------------|
-| Oct 11 | Organizational + intro |
-| Oct 18 | TODO                   |
-| Oct 25 | TODO                   |
-| Nov 1 | NO CLASS |
-| Nov 8  | TODO                   |
-| Nov 15 | TODO                   |
-| Nov 22 | TODO                   |
-| Nov 29 | TODO                   |
-| Dec 6 | TODO                   |
-| Dec 13 | TODO                   |
-| Dec 20 | TODO                   |
-|        | WINTER BREAK           |
-| Jan 10 | TODO                   |
-| Jan 17 | TODO                   |
-| Jan 24 | TODO                   |
-| Jan 31 | TODO                   |
+| date   | class                                                     |
+|--------+-----------------------------------------------------------|
+| Oct 11 | Truth-conditional semantics and the Fregean Program       |
+| Oct 18 | Executing the Fregean program                             |
+| Oct 25 | Semantics and syntax                                      |
+| Nov 1  | NO CLASS                                                  |
+| Nov 8  | Nonverbal predicates, modifiers, definite descriptions    |
+| Nov 15 | Relative clauses, variables, variable binding             |
+| Nov 22 | Quantifiers: their semantic type                          |
+| Nov 29 | Quantification and grammar                                |
+| Dec 6  | Syntactic and semantic constraints on quantifier movement |
+| Dec 13 | Bound and referential pronouns and ellipsis               |
+| Dec 20 | Synactic and semantic binding                             |
+|        | WINTER BREAK                                              |
+| Jan 10 | E-type anaphora                                           |
+| Jan 17 | First steps towards an intensional semantics              |
+| Jan 24 | TBC                                                       |
+| Jan 31 | TBC                                                       |
 
 - Exam details TBA.
   
