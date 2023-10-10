@@ -110,6 +110,8 @@ In each case, say whether or not the equality holds:
 5. \(\set{x : x \in A} = A\)
 6. \(\set{x : x \in  \set{y : y \in  B}} = B\)
 7. \(\set{x : \set{y : y\text{ likes }x } = \emptyset } = \set{x : \set{x : x\text{ likes }x } = \emptyset }\)
+   
+** Functions
 
  
 #+print_bibliography:
