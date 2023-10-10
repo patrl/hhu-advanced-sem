@@ -1,0 +1,183 @@
+% Created 2023-10-10 Tue 16:02
+% Intended LaTeX compiler: pdflatex
+\documentclass[letterpaper,parskip=half]{scrartcl}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\usepackage{hyperref}
+\usepackage{braket}
+\input{boilerplate}
+\author{Patrick D. Elliott}
+\date{\today}
+\title{Semantics in Generative Grammar\\\medskip
+\large Notes from Class 1}
+\hypersetup{
+ pdfauthor={Patrick D. Elliott},
+ pdftitle={Semantics in Generative Grammar},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 29.1 (Org mode 9.7-pre)}, 
+ pdflang={English}}
+\usepackage{biblatex}
+\addbibresource{../../bibliography/master.bib}
+\addbibresource{~/repos/bibliography/master.bib}
+\begin{document}
+
+\maketitle
+\tableofcontents
+
+\section{Reading for next week}
+\label{sec:org82fcd87}
+
+\begin{itemize}
+\item Chapters 1 and 2 of \autocite{HeimKratzer1998}, i.e., up to the end of \textbf{Executing the Fregean Program}.
+\end{itemize}
+\section{Truth-conditions and compositionality}
+\label{sec:org17c8d5a}
+
+\begin{itemize}
+\item Conjecture: to know the meaning of a sentence is to know its \emph{truth-conditions} (Alfred Tarski).
+\end{itemize}
+
+\begin{exe}
+\ex The sentence ``snow is white'' is true if and only if snow is white.
+\label{org53ca671}
+\end{exe}
+
+\begin{itemize}
+\item More general schema (as long as both the object language and the meta-language are the same):
+\end{itemize}
+
+\begin{exe}
+\ex The sentence ``\(\_\_\_\)'' is true if and only if \(\_\_\_\)
+\label{org07779c4}
+\end{exe}
+
+\begin{itemize}
+\item Is this trivial/circular?
+\begin{itemize}
+\item One way of understanding this conjecture: semantic competence involves ``knowing'' the associations between particular sentences and ways in which the world can be (as described by the meta-language).
+\item Crucially, we know the truth-conditions of sentences we've never heard before.
+\item Semantic competence can't amount to just learning associations of sentences-meanings, since the meanings of sentences relate to the meanings of their parts in systematic ways (Gottlob Frege).
+\end{itemize}
+\item How are meanings put together? Frege's conjecture was that certain meanings are 'incomplete'; in his terms \emph{unsaturated}.
+\end{itemize}
+
+\begin{quote}
+``Statements in general, just like equations or inequalities or expressions in
+Analysis, can be imagined to be split up into two parts; one complete in
+itself, and the other in need of supplementation, or ''unsaturated.`` Thus,
+e.g., we split up the sentence ''Caesar conquered Gaul`` into '' Caesar`` and ''conquered Gaul.`` The second part is ''unsaturated`` - it contains an empty place; only when this place is filled up with a proper name, or with an expression that replaces a proper name, does a complete sense appear. Here too I give the name ''function`` to what this ''unsaturated`` part stands for. In this case the argument is Caesar.''\\[0pt]
+-- Frege
+\end{quote}
+
+\begin{itemize}
+\item Frege models the notion of an ``unsaturated'' meaning as a function looking for an argument.
+\end{itemize}
+\section{Formal preliminaries}
+\label{sec:org23f6cde}
+
+\subsection{Sets}
+\label{sec:orgbe54d9c}
+
+\begin{itemize}
+\item A set \(A\) is a collection of objects called \emph{members} or \emph{elements} of the set; \(x\) is an element of \(A\) is written \(x \in A\).
+\item Sets may have finitely, or infinitely many members.
+\item Sets are identified with their members; there is exactly one set with no members: the \emph{empty set}, written \(\emptyset\).
+\end{itemize}
+\subsection{Set relations}
+\label{sec:orgd63a9c0}
+
+\begin{itemize}
+\item Two sets are equal \(A = B\) if \(A\) and \(B\) have the same members.
+\begin{itemize}
+\item The order in which members are written doesn't matter for set equality.
+\end{itemize}
+\item \(A\) is a subset of \(B\) \(A \subseteq B\), if \(\forall x \in A\), \(x \in B\).
+\item Which of the following statements (if any) are true?
+\begin{itemize}
+\item For any set \(A\), \(\emptyset \in A\).
+\item For any set \(A\), \(\emptyset \subseteq A\).
+\item For any set \(A\), \(A \subseteq A\).
+\end{itemize}
+\begin{itemize}
+\item \(A\) is a \emph{strict} subset of \(B\), \(A \subset B\), if \(A \subseteq B\), and \(A \neq B\).
+\item \(A\) is a superset of \(B\), \(A \supseteq B\), if \(B \subseteq A\).
+\begin{itemize}
+\item Strict supersethood \(A \sup B\) has the obvious definition (what is it?).
+\end{itemize}
+\end{itemize}
+\end{itemize}
+\subsection{Set operations}
+\label{sec:orgb68f4a0}
+
+\begin{itemize}
+\item \(x \in A \cap B\) (the intersection of \(A\) and \(B\)) iff \(x \in A\) and \(x \in  B\).
+\item \(x \in A \cup B\) (the union of \(A\) and \(B\)) iff \(x \in A\) or \(x \in  B\).
+\item \(x \in  B - A\) (the complement of \(A\) in \(B\)) iff \(x \in  B\) and \(x \notin A\).
+\end{itemize}
+\subsection{Defining sets}
+\label{sec:org549ea46}
+
+\begin{itemize}
+\item Sets can be defined extensionally by explicitly listing their members:
+\end{itemize}
+
+\begin{exe}
+\ex \(A \coloneq \set{a,b,c}\)
+\label{org84fb968}
+\end{exe}
+
+\begin{itemize}
+\item Sets can be defined intensionally using abstraction notation:
+\end{itemize}
+
+\begin{exe}
+\ex \(A := \set{x : x\text{ is a cat} }\)
+\label{orga86bbe1}
+\end{exe}
+
+\begin{itemize}
+\item \(a \in \set{ x | \phi }\) iff \(\phi[x \to a]\) is true.\footnote{\(\phi[x \to a]\) is to be understood as the statement \(\phi\), where all occurrences of the variable \(x\) in \(\phi\) have been replaced with \(a\).}
+\end{itemize}
+\subsection{Questions}
+\label{sec:org6e8a28b}
+
+\begin{itemize}
+\item If the \(x\) in \(\set{x : x\text{ is a positive integer less than }7 }\) is a place-holder, why do we need it at all? Why don't we just write \(\set{\_ : \_ \text{is a positive integer less than }7 }\)?
+\item Consider the following sets. Which one(s) corresponds to \emph{the set of objects which don't like anything}, and which one corresponds to \emph{the set of objects which nothing likes}?
+\begin{itemize}
+\item \(\set{x : \set{y : x\text{ likes }y } = \emptyset }\)
+\item \(\set{x : \set{y : y\text{ likes }x } = \emptyset }\)
+\item \(\set{y : \set{x : x\text{ likes y} } = \emptyset }\)
+\end{itemize}
+\item Why do we need the variable to the left of the colon? Why can't we just write \(\set{x\text{ is a positive integer less than }7 }\).
+\item What does the following mean? \(\set{\text{California} :\text{California is a western state}  }\)
+\item What about the following? \(\set{x : \text{California is a western state} }\)
+\item Evaluate whether the following is true, and show your reasoning: \(29 \in  \set{x : x \in \set{x : x \neq \emptyset }}\).
+\end{itemize}
+\subsection{Exercise}
+\label{sec:org6250a8e}
+
+In each case, say whether or not the equality holds:
+
+\begin{enumerate}
+\item \(\set{a} = \set{b}\)
+\item \(\set{x : x = a} = \set{a}\)
+\item \(\set{x : x\text{ is green} } = \set{y : y\text{ is green} }\)
+\item \(\set{x : x\text{ likes }a } = \set{y : y\text{ likes }b }\)
+\item \(\set{x : x \in A} = A\)
+\item \(\set{x : x \in  \set{y : y \in  B}} = B\)
+\item \(\set{x : \set{y : y\text{ likes }x } = \emptyset } = \set{x : \set{x : x\text{ likes }x } = \emptyset }\)
+\end{enumerate}
+
+
+\printbibliography
+\end{document}

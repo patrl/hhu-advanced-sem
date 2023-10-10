@@ -1,0 +1,119 @@
+#+title: Semantics in Generative Grammar
+#+subtitle: Notes from Class 1 
+#+author: Patrick D. Elliott
+#+bibliography: ../../bibliography/master.bib
+#+setupfile: ./handout-template.org
+#+OPTIONS: ':t
+#+cite_export: biblatex
+
+* Reading for next week
+
+- Chapters 1 and 2 of [cite:@HeimKratzer1998], i.e., up to the end of *Executing the Fregean Program*.
+  
+* Truth-conditions and compositionality 
+
+- Conjecture: to know the meaning of a sentence is to know its /truth-conditions/ (Alfred Tarski).
+  
+#+name: 
+#+begin_exe
+\ex The sentence "snow is white" is true if and only if snow is white.
+#+end_exe
+
+- More general schema (as long as both the object language and the meta-language are the same):
+
+#+name: 
+#+begin_exe
+\ex The sentence "\(\_\_\_\)" is true if and only if \(\_\_\_\)
+#+end_exe
+
+- Is this trivial/circular?
+  * One way of understanding this conjecture: semantic competence involves "knowing" the associations between particular sentences and ways in which the world can be (as described by the meta-language).
+  * Crucially, we know the truth-conditions of sentences we've never heard before.
+  * Semantic competence can't amount to just learning associations of sentences-meanings, since the meanings of sentences relate to the meanings of their parts in systematic ways (Gottlob Frege).
+- How are meanings put together? Frege's conjecture was that certain meanings are 'incomplete'; in his terms /unsaturated/.
+  
+#+begin_quote
+"Statements in general, just like equations or inequalities or expressions in
+Analysis, can be imagined to be split up into two parts; one complete in
+itself, and the other in need of supplementation, or "unsaturated." Thus,
+e.g., we split up the sentence "Caesar conquered Gaul" into " Caesar" and "conquered Gaul." The second part is "unsaturated" - it contains an empty place; only when this place is filled up with a proper name, or with an expression that replaces a proper name, does a complete sense appear. Here too I give the name "function" to what this "unsaturated" part stands for. In this case the argument is Caesar."\\
+-- Frege
+#+end_quote
+
+- Frege models the notion of an "unsaturated" meaning as a function looking for an argument.
+
+* Formal preliminaries
+
+** Sets
+
+- A set \(A\) is a collection of objects called /members/ or /elements/ of the set; \(x\) is an element of \(A\) is written \(x \in A\).
+- Sets may have finitely, or infinitely many members. 
+- Sets are identified with their members; there is exactly one set with no members: the /empty set/, written \(\emptyset \).
+ 
+** Set relations
+
+- Two sets are equal \(A = B\) if \(A\) and \(B\) have the same members.
+  * The order in which members are written doesn't matter for set equality.
+- \(A\) is a subset of \(B\) \(A \subseteq B\), if \(\forall x \in A\), \(x \in B\).
+- Which of the following statements (if any) are true?
+  * For any set \(A\), \(\emptyset \in A\).
+  * For any set \(A\), \(\emptyset \subseteq A\).
+  * For any set \(A\), \(A \subseteq A\).
+ - \(A\) is a /strict/ subset of \(B\), \(A \subset B\), if \(A \subseteq B\), and \(A \neq B\).
+ - \(A\) is a superset of \(B\), \(A \supseteq B\), if \(B \subseteq A\).
+   * Strict supersethood \(A \sup B\) has the obvious definition (what is it?).
+     
+** Set operations
+
+- \(x \in A \cap B\) (the intersection of \(A\) and \(B\)) iff \(x \in A\) and \(x \in  B\). 
+- \(x \in A \cup B\) (the union of \(A\) and \(B\)) iff \(x \in A\) or \(x \in  B\).
+- \(x \in  B - A\) (the complement of \(A\) in \(B\)) iff \(x \in  B\) and \(x \notin A\).
+  
+** Defining sets
+
+- Sets can be defined extensionally by explicitly listing their members:
+
+#+name: 
+#+begin_exe
+\ex \(A \coloneq \set{a,b,c}\)
+#+end_exe
+
+- Sets can be defined intensionally using abstraction notation:
+
+#+name: 
+#+begin_exe
+\ex \(A := \set{x : x\text{ is a cat} }\)
+#+end_exe
+
+- \(a \in \set{ x | \phi }\) iff \(\phi[x \to a]\) is true.[fn:1] 
+  
+** Questions
+
+- If the \(x\) in \(\set{x : x\text{ is a positive integer less than }7 }\) is a place-holder, why do we need it at all? Why don't we just write \(\set{\_ : \_ \text{is a positive integer less than }7 }\)?
+- Consider the following sets. Which one(s) corresponds to /the set of objects which don't like anything/, and which one corresponds to /the set of objects which nothing likes/?
+  * \(\set{x : \set{y : x\text{ likes }y } = \emptyset }\)
+  * \(\set{x : \set{y : y\text{ likes }x } = \emptyset }\)
+  * \(\set{y : \set{x : x\text{ likes y} } = \emptyset }\)
+- Why do we need the variable to the left of the colon? Why can't we just write \(\set{x\text{ is a positive integer less than }7 }\).
+- What does the following mean? \(\set{\text{California} :\text{California is a western state}  }\)
+- What about the following? \(\set{x : \text{California is a western state} }\)
+- Evaluate whether the following is true, and show your reasoning: \(29 \in  \set{x : x \in \set{x : x \neq \emptyset }}\).
+  
+** Exercise
+
+In each case, say whether or not the equality holds:
+
+1. \(\set{a} = \set{b}\)
+2. \(\set{x : x = a} = \set{a}\)
+3. \(\set{x : x\text{ is green} } = \set{y : y\text{ is green} }\)
+4. \(\set{x : x\text{ likes }a } = \set{y : y\text{ likes }b }\)
+5. \(\set{x : x \in A} = A\)
+6. \(\set{x : x \in  \set{y : y \in  B}} = B\)
+7. \(\set{x : \set{y : y\text{ likes }x } = \emptyset } = \set{x : \set{x : x\text{ likes }x } = \emptyset }\)
+
+ 
+#+print_bibliography:
+
+* Footnotes
+
+[fn:1] \(\phi[x \to a]\) is to be understood as the statement \(\phi \), where all occurrences of the variable \(x\) in \(\phi \) have been replaced with \(a\).
