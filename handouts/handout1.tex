@@ -1,4 +1,4 @@
-% Created 2023-10-11 Wed 10:05
+% Created 2023-10-11 Wed 10:12
 % Intended LaTeX compiler: pdflatex
 \documentclass[letterpaper,parskip=half]{scrartcl}
 \usepackage[utf8]{inputenc}
@@ -34,13 +34,13 @@
 \tableofcontents
 
 \section{Reading for next week}
-\label{sec:org932ab49}
+\label{sec:orgc614e62}
 
 \begin{itemize}
 \item Chapters 1 and 2 of \autocite{HeimKratzer1998}, i.e., up to the end of \textbf{Executing the Fregean Program}.
 \end{itemize}
 \section{Truth-conditions and compositionality}
-\label{sec:org85d386b}
+\label{sec:org28f92d5}
 
 \begin{itemize}
 \item Conjecture: to know the meaning of a sentence is to know its \emph{truth-conditions} (Alfred Tarski).
@@ -48,7 +48,7 @@
 
 \begin{exe}
 \ex The sentence ``snow is white'' is true if and only if snow is white.
-\label{org9c5392f}
+\label{org4297b28}
 \end{exe}
 
 \begin{itemize}
@@ -57,7 +57,7 @@
 
 \begin{exe}
 \ex The sentence ``\(\_\_\_\)'' is true if and only if \(\_\_\_\)
-\label{org99b00c0}
+\label{org7082d94}
 \end{exe}
 
 \begin{itemize}
@@ -82,10 +82,10 @@ e.g., we split up the sentence ''Caesar conquered Gaul`` into '' Caesar`` and ''
 \item Frege models the notion of an ``unsaturated'' meaning as a function looking for an argument.
 \end{itemize}
 \section{Formal preliminaries}
-\label{sec:orgb72170d}
+\label{sec:org3a70fa3}
 
 \subsection{Sets}
-\label{sec:org113fcb2}
+\label{sec:org3bdd7a4}
 
 \begin{itemize}
 \item A set \(A\) is a collection of objects called \emph{members} or \emph{elements} of the set; \(x\) is an element of \(A\) is written \(x \in A\).
@@ -93,7 +93,7 @@ e.g., we split up the sentence ''Caesar conquered Gaul`` into '' Caesar`` and ''
 \item Sets are identified with their members; there is exactly one set with no members: the \emph{empty set}, written \(\emptyset\).
 \end{itemize}
 \subsection{Set relations}
-\label{sec:org376891b}
+\label{sec:org2ef9681}
 
 \begin{itemize}
 \item Two sets are equal \(A = B\) if \(A\) and \(B\) have the same members.
@@ -116,7 +116,7 @@ e.g., we split up the sentence ''Caesar conquered Gaul`` into '' Caesar`` and ''
 \end{itemize}
 \end{itemize}
 \subsection{Set operations}
-\label{sec:org19899ae}
+\label{sec:org043c13c}
 
 \begin{itemize}
 \item \(x \in A \cap B\) (the intersection of \(A\) and \(B\)) iff \(x \in A\) and \(x \in  B\).
@@ -124,7 +124,7 @@ e.g., we split up the sentence ''Caesar conquered Gaul`` into '' Caesar`` and ''
 \item \(x \in  B - A\) (the complement of \(A\) in \(B\)) iff \(x \in  B\) and \(x \notin A\).
 \end{itemize}
 \subsection{Defining sets}
-\label{sec:orgff102f0}
+\label{sec:orgae04fb8}
 
 \begin{itemize}
 \item Sets can be defined extensionally by explicitly listing their members:
@@ -132,7 +132,7 @@ e.g., we split up the sentence ''Caesar conquered Gaul`` into '' Caesar`` and ''
 
 \begin{exe}
 \ex \(A \coloneq \set{a,b,c}\)
-\label{orgfd1fe01}
+\label{orgc690a0d}
 \end{exe}
 
 \begin{itemize}
@@ -141,14 +141,14 @@ e.g., we split up the sentence ''Caesar conquered Gaul`` into '' Caesar`` and ''
 
 \begin{exe}
 \ex \(A := \set{x : x\text{ is a cat} }\)
-\label{orgee571aa}
+\label{org8eaf834}
 \end{exe}
 
 \begin{itemize}
 \item \(a \in \set{ x | \phi }\) iff \(\phi[x \to a]\) is true.\footnote{\(\phi[x \to a]\) is to be understood as the statement \(\phi\), where all occurrences of the variable \(x\) in \(\phi\) have been replaced with \(a\).}
 \end{itemize}
 \subsection{Questions}
-\label{sec:org12bffe1}
+\label{sec:org9c2438c}
 
 \begin{itemize}
 \item If the \(x\) in \(\set{x : x\text{ is a positive integer less than }7 }\) is a place-holder, why do we need it at all? Why don't we just write \(\set{\_ : \_ \text{is a positive integer less than }7 }\)?
@@ -164,7 +164,7 @@ e.g., we split up the sentence ''Caesar conquered Gaul`` into '' Caesar`` and ''
 \item Evaluate whether the following is true, and show your reasoning: \(29 \in  \set{x : x \in \set{x : x \neq \emptyset }}\).
 \end{itemize}
 \subsection{Exercise}
-\label{sec:org65a2211}
+\label{sec:org86e42e8}
 
 In each case, say whether or not the equality holds:
 
@@ -178,7 +178,7 @@ In each case, say whether or not the equality holds:
 \item \(\set{x : \set{y : y\text{ likes }x } = \emptyset } = \set{x : \set{x : x\text{ likes }x } = \emptyset }\)
 \end{enumerate}
 \subsection{Functions}
-\label{sec:org848480b}
+\label{sec:orge504679}
 
 \begin{itemize}
 \item An \emph{ordered pair} of \(x,y\), written \(<x,y>\).
@@ -191,7 +191,7 @@ In each case, say whether or not the equality holds:
 
 \begin{exe}
 \ex \textbf{Functions (def.):} A relation \(f\) is a \emph{function} iff it satisfies the following condition: for any \(x\): if there are \(y,z\) s.t., \(<x,y> \in f\), and \(<x,z> \in  f\), then \(y = z\).
-\label{org1b9e58e}
+\label{orgd003318}
 \end{exe}
 
 \begin{itemize}
@@ -203,7 +203,7 @@ In each case, say whether or not the equality holds:
 \begin{exe}
 \ex \textbf{Mathematical notation for functions (def.):}\\[0pt]
 \(f(x) := \text{the unique }y\text{ s.t. }<x,y> \in f\)
-\label{org1f9f792}
+\label{org4f7d3b3}
 \end{exe}
 
 \begin{itemize}
@@ -225,10 +225,10 @@ d \to e
 
 \begin{exe}
 \ex Let \(f_{+1}\) be that function \(f\) s.t. \(f : \mathbb{N} \to \mathbb{N}\), and for every \(n \in \mathbb{N}\), \(f(n) = n + 1\).
-\label{orgf6df84a}
+\label{orgb389079}
 \end{exe}
 \section{Executing the Fregean program}
-\label{sec:orgad5183e}
+\label{sec:orgf032dcb}
 
 \begin{exe}
   \ex
@@ -245,7 +245,7 @@ d \to e
 \item Extensions of proper names: individuals. The extension of ``Ann'' is \textbf{Ann}.
 \end{itemize}
 \subsection{Components of a fragment}
-\label{sec:org52d18bb}
+\label{sec:orgaecc998}
 
 \begin{enumerate}
 \item An inventory of denotations (``the model'').
@@ -267,7 +267,7 @@ d \to e
 \end{itemize}
 \end{enumerate}
 \subsection{A concrete example}
-\label{sec:orgb778941}
+\label{sec:org92d4359}
 
 \textbf{Exercise:} prove the following claim:
 

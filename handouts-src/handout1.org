@@ -3,6 +3,7 @@
 #+author: Patrick D. Elliott
 #+bibliography: ../../bibliography/master.bib
 #+setupfile: ./handout-template.org
+#+export_file_name: ../handouts/handout1.pdf
 #+OPTIONS: ':t
 #+cite_export: biblatex
 
