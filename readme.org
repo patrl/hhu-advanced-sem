@@ -1,2 +1,4 @@
-#+title: Readme
+#+title: Advanced semantics materials
 #+author: Patrick D. Elliott
+
+- You're probably looking for the [[file:syllabus.pdf][syllabus]] or the [[file:handouts/][class handouts]].
