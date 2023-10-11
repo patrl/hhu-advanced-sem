@@ -113,6 +113,86 @@ In each case, say whether or not the equality holds:
    
 ** Functions
 
+- An /ordered pair/ of \(x,y\), written \(<x,y>\).
+  * \(<x,y> \neq <y,x>\) (if \(x \neq y\)).
+- A /relation/ is a set of ordered pairs.
+- A /function/ is a special kind of relation.
+
+#+name: 
+#+begin_exe
+\ex *Functions (def.):* A relation \(f\) is a /function/ iff it satisfies the following condition: for any \(x\): if there are \(y,z\) s.t., \(<x,y> \in f\), and \(<x,z> \in  f\), then \(y = z\).
+#+end_exe
+
+- The /domain/ of a function \(f\) is \(\set{x : \text{there is a }y\text{ such that }<x,y> \in f  }\).
+- The /range/ of \(f\) is \(\set{x : \text{there is a }y\text{ such that }<y,x> \in  f  }\).
+- When \(A\) is the domain, and \(B\) the range of \(f\), \(f\) is a function "from \(A\) onto \(B\), written \(f : A \rightarrow B\)".
+
+#+name: 
+#+begin_exe
+\ex *Mathematical notation for functions (def.):*\\
+\(f(x) := \text{the unique }y\text{ s.t. }<x,y> \in f  \)
+#+end_exe
+
+- \(f(x)\) is pronounced "\(f\) applied to \(x\)", or "\(f\) of \(x\)". We'll usually write \(f(x) = y\) instead of (equivalently) \(<x,y> \in f\).
+- Two different ways of writing functions extensionally:
+
+\[f := \set{<a,b>,<c,b>,<d,e>}\]
+
+\[f := \left[\begin{aligned}[c]
+a \to b\\
+c \to b\\
+d \to e
+\end{aligned}\right]\]
+
+- Different ways of writing function /intensions/:
+
+#+name: 
+#+begin_exe
+\ex Let \(f_{+1}\) be that function \(f\) s.t. \(f : \mathbb{N} \to \mathbb{N}\), and for every \(n \in \mathbb{N}\), \(f(n) = n + 1\).
+#+end_exe
+
+* Executing the Fregean program
+
+#+begin_export latex
+\begin{exe}
+  \ex
+  \begin{forest}
+    [{S}
+      [{NP} [{N} [{Ann}]]]
+      [{VP} [{V} [{smokes}]]]
+    ]\end{forest}
+\end{exe}
+#+end_export
+
+- Fregean denotation of a sentence: a truth value; a member of the set \(\set{0,1}\).
+- Another word for a Fregean denotation: an /extension/.
+- Extensions of proper names: individuals. The extension of "Ann" is *Ann*.
+ 
+** Components of a fragment
+
+1. An inventory of denotations ("the model").
+   * Things that linguistic expressions can get mapped to.
+1. The lexicon.
+  * Denotations for each expressions which may occupy a terminal node.
+2. Semantic rules.
+  * Rules that allow us to compute the determine the denotation for each kind o non-terminal node.
+
+- The /interpretation function/ \(\eval{.}\) is a function from the set of linguistic expression onto the set of possible denotations.
+  * By giving a total definition of the interpretation function for (i) lexical items, and (ii) non-terminal nodes, we provide the lexicon and the semantic rules respectively.
+    
+** A concrete example
+
+*Exercise:* prove the following claim:
+
+#+begin_export latex
+\[\eval*{\begin{array}{c}
+\begin{forest}
+    [{S}
+      [{NP} [{N} [{Ann}]]]
+      [{VP} [{V} [{smokes}]]]
+    ]\end{forest}
+\end{array}} = 1\text{ iff Ann smokes}\]
+#+end_export
  
 #+print_bibliography:
 

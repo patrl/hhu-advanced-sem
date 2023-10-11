@@ -1,4 +1,4 @@
-% Created 2023-10-10 Tue 16:02
+% Created 2023-10-11 Wed 10:05
 % Intended LaTeX compiler: pdflatex
 \documentclass[letterpaper,parskip=half]{scrartcl}
 \usepackage[utf8]{inputenc}
@@ -34,13 +34,13 @@
 \tableofcontents
 
 \section{Reading for next week}
-\label{sec:org82fcd87}
+\label{sec:org932ab49}
 
 \begin{itemize}
 \item Chapters 1 and 2 of \autocite{HeimKratzer1998}, i.e., up to the end of \textbf{Executing the Fregean Program}.
 \end{itemize}
 \section{Truth-conditions and compositionality}
-\label{sec:org17c8d5a}
+\label{sec:org85d386b}
 
 \begin{itemize}
 \item Conjecture: to know the meaning of a sentence is to know its \emph{truth-conditions} (Alfred Tarski).
@@ -48,7 +48,7 @@
 
 \begin{exe}
 \ex The sentence ``snow is white'' is true if and only if snow is white.
-\label{org53ca671}
+\label{org9c5392f}
 \end{exe}
 
 \begin{itemize}
@@ -57,7 +57,7 @@
 
 \begin{exe}
 \ex The sentence ``\(\_\_\_\)'' is true if and only if \(\_\_\_\)
-\label{org07779c4}
+\label{org99b00c0}
 \end{exe}
 
 \begin{itemize}
@@ -82,10 +82,10 @@ e.g., we split up the sentence ''Caesar conquered Gaul`` into '' Caesar`` and ''
 \item Frege models the notion of an ``unsaturated'' meaning as a function looking for an argument.
 \end{itemize}
 \section{Formal preliminaries}
-\label{sec:org23f6cde}
+\label{sec:orgb72170d}
 
 \subsection{Sets}
-\label{sec:orgbe54d9c}
+\label{sec:org113fcb2}
 
 \begin{itemize}
 \item A set \(A\) is a collection of objects called \emph{members} or \emph{elements} of the set; \(x\) is an element of \(A\) is written \(x \in A\).
@@ -93,7 +93,7 @@ e.g., we split up the sentence ''Caesar conquered Gaul`` into '' Caesar`` and ''
 \item Sets are identified with their members; there is exactly one set with no members: the \emph{empty set}, written \(\emptyset\).
 \end{itemize}
 \subsection{Set relations}
-\label{sec:orgd63a9c0}
+\label{sec:org376891b}
 
 \begin{itemize}
 \item Two sets are equal \(A = B\) if \(A\) and \(B\) have the same members.
@@ -116,7 +116,7 @@ e.g., we split up the sentence ''Caesar conquered Gaul`` into '' Caesar`` and ''
 \end{itemize}
 \end{itemize}
 \subsection{Set operations}
-\label{sec:orgb68f4a0}
+\label{sec:org19899ae}
 
 \begin{itemize}
 \item \(x \in A \cap B\) (the intersection of \(A\) and \(B\)) iff \(x \in A\) and \(x \in  B\).
@@ -124,7 +124,7 @@ e.g., we split up the sentence ''Caesar conquered Gaul`` into '' Caesar`` and ''
 \item \(x \in  B - A\) (the complement of \(A\) in \(B\)) iff \(x \in  B\) and \(x \notin A\).
 \end{itemize}
 \subsection{Defining sets}
-\label{sec:org549ea46}
+\label{sec:orgff102f0}
 
 \begin{itemize}
 \item Sets can be defined extensionally by explicitly listing their members:
@@ -132,7 +132,7 @@ e.g., we split up the sentence ''Caesar conquered Gaul`` into '' Caesar`` and ''
 
 \begin{exe}
 \ex \(A \coloneq \set{a,b,c}\)
-\label{org84fb968}
+\label{orgfd1fe01}
 \end{exe}
 
 \begin{itemize}
@@ -141,14 +141,14 @@ e.g., we split up the sentence ''Caesar conquered Gaul`` into '' Caesar`` and ''
 
 \begin{exe}
 \ex \(A := \set{x : x\text{ is a cat} }\)
-\label{orga86bbe1}
+\label{orgee571aa}
 \end{exe}
 
 \begin{itemize}
 \item \(a \in \set{ x | \phi }\) iff \(\phi[x \to a]\) is true.\footnote{\(\phi[x \to a]\) is to be understood as the statement \(\phi\), where all occurrences of the variable \(x\) in \(\phi\) have been replaced with \(a\).}
 \end{itemize}
 \subsection{Questions}
-\label{sec:org6e8a28b}
+\label{sec:org12bffe1}
 
 \begin{itemize}
 \item If the \(x\) in \(\set{x : x\text{ is a positive integer less than }7 }\) is a place-holder, why do we need it at all? Why don't we just write \(\set{\_ : \_ \text{is a positive integer less than }7 }\)?
@@ -164,7 +164,7 @@ e.g., we split up the sentence ''Caesar conquered Gaul`` into '' Caesar`` and ''
 \item Evaluate whether the following is true, and show your reasoning: \(29 \in  \set{x : x \in \set{x : x \neq \emptyset }}\).
 \end{itemize}
 \subsection{Exercise}
-\label{sec:org6250a8e}
+\label{sec:org65a2211}
 
 In each case, say whether or not the equality holds:
 
@@ -177,7 +177,107 @@ In each case, say whether or not the equality holds:
 \item \(\set{x : x \in  \set{y : y \in  B}} = B\)
 \item \(\set{x : \set{y : y\text{ likes }x } = \emptyset } = \set{x : \set{x : x\text{ likes }x } = \emptyset }\)
 \end{enumerate}
+\subsection{Functions}
+\label{sec:org848480b}
 
+\begin{itemize}
+\item An \emph{ordered pair} of \(x,y\), written \(<x,y>\).
+\begin{itemize}
+\item \(<x,y> \neq <y,x>\) (if \(x \neq y\)).
+\end{itemize}
+\item A \emph{relation} is a set of ordered pairs.
+\item A \emph{function} is a special kind of relation.
+\end{itemize}
+
+\begin{exe}
+\ex \textbf{Functions (def.):} A relation \(f\) is a \emph{function} iff it satisfies the following condition: for any \(x\): if there are \(y,z\) s.t., \(<x,y> \in f\), and \(<x,z> \in  f\), then \(y = z\).
+\label{org1b9e58e}
+\end{exe}
+
+\begin{itemize}
+\item The \emph{domain} of a function \(f\) is \(\set{x : \text{there is a }y\text{ such that }<x,y> \in f  }\).
+\item The \emph{range} of \(f\) is \(\set{x : \text{there is a }y\text{ such that }<y,x> \in  f  }\).
+\item When \(A\) is the domain, and \(B\) the range of \(f\), \(f\) is a function ``from \(A\) onto \(B\), written \(f : A \rightarrow B\)''.
+\end{itemize}
+
+\begin{exe}
+\ex \textbf{Mathematical notation for functions (def.):}\\[0pt]
+\(f(x) := \text{the unique }y\text{ s.t. }<x,y> \in f\)
+\label{org1f9f792}
+\end{exe}
+
+\begin{itemize}
+\item \(f(x)\) is pronounced ``\(f\) applied to \(x\)'', or ``\(f\) of \(x\)''. We'll usually write \(f(x) = y\) instead of (equivalently) \(<x,y> \in f\).
+\item Two different ways of writing functions extensionally:
+\end{itemize}
+
+\[f := \set{<a,b>,<c,b>,<d,e>}\]
+
+\[f := \left[\begin{aligned}[c]
+a \to b\\
+c \to b\\
+d \to e
+\end{aligned}\right]\]
+
+\begin{itemize}
+\item Different ways of writing function \emph{intensions}:
+\end{itemize}
+
+\begin{exe}
+\ex Let \(f_{+1}\) be that function \(f\) s.t. \(f : \mathbb{N} \to \mathbb{N}\), and for every \(n \in \mathbb{N}\), \(f(n) = n + 1\).
+\label{orgf6df84a}
+\end{exe}
+\section{Executing the Fregean program}
+\label{sec:orgad5183e}
+
+\begin{exe}
+  \ex
+  \begin{forest}
+    [{S}
+      [{NP} [{N} [{Ann}]]]
+      [{VP} [{V} [{smokes}]]]
+    ]\end{forest}
+\end{exe}
+
+\begin{itemize}
+\item Fregean denotation of a sentence: a truth value; a member of the set \(\set{0,1}\).
+\item Another word for a Fregean denotation: an \emph{extension}.
+\item Extensions of proper names: individuals. The extension of ``Ann'' is \textbf{Ann}.
+\end{itemize}
+\subsection{Components of a fragment}
+\label{sec:org52d18bb}
+
+\begin{enumerate}
+\item An inventory of denotations (``the model'').
+\begin{itemize}
+\item Things that linguistic expressions can get mapped to.
+\end{itemize}
+\item The lexicon.
+\begin{itemize}
+\item Denotations for each expressions which may occupy a terminal node.
+\end{itemize}
+\item Semantic rules.
+\begin{itemize}
+\item Rules that allow us to compute the determine the denotation for each kind o non-terminal node.
+\end{itemize}
+
+\item The \emph{interpretation function} \(\eval{.}\) is a function from the set of linguistic expression onto the set of possible denotations.
+\begin{itemize}
+\item By giving a total definition of the interpretation function for (i) lexical items, and (ii) non-terminal nodes, we provide the lexicon and the semantic rules respectively.
+\end{itemize}
+\end{enumerate}
+\subsection{A concrete example}
+\label{sec:orgb778941}
+
+\textbf{Exercise:} prove the following claim:
+
+\[\eval*{\begin{array}{c}
+\begin{forest}
+    [{S}
+      [{NP} [{N} [{Ann}]]]
+      [{VP} [{V} [{smokes}]]]
+    ]\end{forest}
+\end{array}} = 1\text{ iff Ann smokes}\]
 
 \printbibliography
 \end{document}
